@@ -1,0 +1,16 @@
+section#hero.hero.js-section
+	.wrapper.hero__wrapper
+		.hero__pretitle
+			date.hero__date <?= $site->conf_date() ?>
+			|, 
+			span.hero__place <?= $site->conf_place() ?>
+		h1.hero__title <?= $site->title() ?>
+		img(src="assets/images/logo.svg").hero__logo
+		
+		h2.hero__subtitle <?= $data->subtitle() ?>
+		.hero__buttons.buttons
+			a(href="#about").buttons__item.button--ghost_main.js-scrollTo <?= l::get("learn more") ?>
+			a(href="#sponsors").buttons__item.button--ghost_accent.js-scrollTo <?= l::get("sponsor") ?>
+		.hero__foot
+			a(href="#about").hero__down.js-scrollTo
+				svg: use(xlink:href="#icon-arrow-double-down")

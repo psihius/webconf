@@ -1,0 +1,24 @@
+header.siteHeader.js-siteHeader
+	nav.siteHeader__lang.nav(role="navigation").js-siteHeaderLang
+		<? foreach($site->languages() as $language): ?>
+		<? 	if($site->language() !== $language): ?>
+		a(href!="<?= $page->url($language->code()) ?>").nav__item--lang <?= $language->code() ?>
+		<? 	endif ?>
+		<? endforeach ?>
+	a(href="#hero").siteHeader__logo.js-siteHeaderLogo.active: img(src="assets/images/logo.svg")
+	nav.siteHeader__mainnav.nav--mainnav
+		button.nav__item--hiddenicon.js-mainnavOpener.active
+			svg: use(xlink:href="#icon-hamburger")
+		button.nav__item--hiddenicon.js-mainnavCloser
+			svg: use(xlink:href="#icon-close")
+		.nav--mainnav__list(role="navigation").js-mainnavList
+			a(href!="#hero").nav--mainnav__item--logo.js-mainnavItem: img(src="assets/images/logo.svg")
+			<? foreach($pages->visible() as $section): ?>
+			a(href!="#<?= $section->uid() ?>").nav--mainnav__item.js-mainnavItem <?= $section->title() ?>
+			<? endforeach ?>
+	nav.siteHeader__socials.nav
+		a(href="https://www.facebook.com/webconfriga").nav__item--icon.icon--fb
+			svg: use(xlink:href="#icon-facebook")
+		a(href="https://twitter.com/webconfriga").nav__item--icon.icon--tw
+			svg: use(xlink:href="#icon-twitter")
+				

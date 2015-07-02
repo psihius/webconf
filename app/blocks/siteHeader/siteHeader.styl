@@ -1,0 +1,47 @@
+.siteHeader
+	position fixed 0 0 auto 0
+	z-index 100
+	&.sticky, &.active
+		background: $color.black
+	display flex
+	height 60px
+	line-height: (@height * 0.9)
+	&__lang
+		flex 1 0 150px
+		padding 0 12px
+		.sticky &
+			display none
+			@media(min-width: $screens.pv.bp)
+				display block
+		&.active
+			display block
+	&__logo
+		display none
+		.sticky &
+			&.active
+				display block
+				@media(min-width: $screens.pv.bp)
+					position block
+				@media(min-width: $screens.th.bp)
+					display none
+
+		flex 1 0 130px
+		padding 12px
+		margin-top -3px
+		img
+			@media(min-width: $screens.pv.bp)
+				margin auto
+	&__mainnav
+		padding 0 12px
+		flex 1 0 150px
+		color: $color.white
+		font-size 18px
+		@media(min-width: $screens.th.bp)
+			flex 2 1 1000px
+	&__socials
+		padding 0 12px
+		flex 1 0 150px
+		text-align right
+		display none
+		@media(min-width: $screens.th.bp)
+			display block

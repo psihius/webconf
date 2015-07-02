@@ -4,3 +4,12 @@
 [submodule "panel"]
 	path = panel
 	url = https://github.com/getkirby/panel.git
+[submodule "lib/swipebox"]
+	path = lib/swipebox
+	url = https://github.com/brutaldesign/swipebox.git
+[submodule "site/plugins/kirby-plugin-thumbExt"]
+	path = site/plugins/kirby-plugin-thumbExt
+	url = https://github.com/jbeyerstedt/kirby-plugin-thumbExt.git
+[submodule "site/plugins/kirby-uniform"]
+	path = site/plugins/kirby-uniform
+	url = https://github.com/mzur/kirby-uniform.git

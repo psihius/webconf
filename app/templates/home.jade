@@ -1,0 +1,5 @@
+extend ../system/html
+block main
+	<? foreach($pages->visible() as $section): ?>
+	<? snippet($section->uid(), array('data' => $section)) ?>
+	<? endforeach ?>

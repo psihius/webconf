@@ -1,0 +1,20 @@
+slides = (0..4)
+delay = 4
+
+.slideshow
+	position absolute 0 0 0 0
+	@media(min-width: 1024px)
+		position fixed 0 0 0 0
+	&__item
+		position absolute 0 0 0 0
+		background-position center
+		background-size cover
+	for k in slides
+		r = length(slides) - k
+		duration = delay * length(slides)
+		&__item:nth-child({r})
+			animation: slideshow (duration)s (k * delay)s infinite;
+	&::after
+		content ""
+		position absolute 0 0 0 0
+		background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAABBJREFUCB1jYMAD6pHlcHMAJvYBfjsxS60AAAAASUVORK5CYII=') alpha($color.black, 70%)

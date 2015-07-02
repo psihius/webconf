@@ -1,0 +1,41 @@
+.stat
+	display flex
+	justify-content space-around
+	&__item
+		//
+	&__concat
+		font-size 18px
+		line-height 32px
+		margin 0 -0.6em 0 -0.3em
+		@media(min-width: $screens.pv.bp)
+			font-size 20px
+			line-height 48px
+			margin 0 -1.3em 0 -0.7em
+		@media(min-width: $screens.tv.bp)
+			font-size 24px
+			line-height 64px
+			margin 0 -1.3em 0 -0.7em
+		color: alpha($color.accent, .5)
+
+
+		//
+	&__value
+		color: $color.accent
+		font($font.body.light)
+	&__label
+		text-transform uppercase
+		font($font.body.regular)
+		margin-top 12px
+		font-size 11px
+		letter-spacing 1px
+		@media(min-width: $screens.pv.bp)
+			font-size 16px
+			letter-spacing 2px
+.stat--past
+	@extend .stat
+	&__value
+		font-size 32px
+		@media(min-width: $screens.pv.bp)
+			font-size 48px
+		@media(min-width: $screens.tv.bp)
+			font-size 64px

@@ -1,0 +1,16 @@
+.pastevent
+	color: $color.white
+	// background: alpha($color.black, .5)
+	padding 32px 16px
+	@media(min-width: $screens.tv.bp)
+		padding 32px
+	&__head
+		padding 0 0 12px
+		@media(min-width: $screens.pv.bp)
+			padding 0 0 24px
+	&__title
+		font-size 24px
+		@media(min-width: $screens.pv.bp)
+			font-size 32px
+		font($font.body.regular)
+		color: darken($color.white, 25%)

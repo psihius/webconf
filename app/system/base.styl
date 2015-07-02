@@ -1,0 +1,87 @@
+*
+	box-sizing border-box
+html
+	overflow-y scroll
+	overflow-x hidden
+	height 100%
+.stop_scroll
+	overflow hidden
+	-webkit-overflow-scrolling none
+body
+	font($font.body.regular)
+	line-height 1
+	background: $color.greyWhite
+	height 100%
+.wrapper
+	max-width 1000px
+	position relative
+	margin auto
+
+p
+	margin 20px 0
+h1,h2,h3,h4,h5,h6
+	margin 0
+	font($font.body.semibold)
+strong
+	font($font.body.semibold)
+
+a, :link, :visited, &:active
+	text-decoration none
+
+a, :visited
+	color: $color.main
+
+a:hover, a:active
+	color: $color.accent
+
+picture, img
+	display block
+label
+	cursor pointer
+	margin 0
+	font-weight inherit
+button
+	outline none
+	border 0
+	background 0
+	padding 0
+	cursor pointer
+select,
+textarea,
+[type=text],
+[type=password],
+[type=search],
+[type=email],
+[type=date],
+[type=time]
+	-webkit-appearance none
+	-moz-appearance none
+	appearance none
+	display inline-block
+	box-sizing border-box
+	border-radius 0
+	outline 0
+	font-size 16px
+	line-height 1
+	background $color-white
+	border 1px solid $color-grey-midlight
+	box-shadow none
+	&::placeholder
+		color $color-grey
+[type=radio],
+[type=checkbox]
+	margin-right 8px
+	// vertical-align 1px
+select
+	border-radius 0
+
+wbr:after
+	content "\00200B"
+
+&::placeholder
+	color $color-grey
+
+textarea
+	resize vertical
+main
+	height 100%

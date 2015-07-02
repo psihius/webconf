@@ -1,0 +1,52 @@
+.section
+	padding 48px 24px
+	@media(min-width: $screens.pv.bp)
+		padding 64px 48px
+	text-align center
+	position relative
+	&__head
+		padding 0 0 24px
+		@media(min-width: $screens.pv.bp)
+			padding 0 0 48px
+	&__title
+		font-size 16px
+		@media(min-width: $screens.pv.bp)
+			font-size 22px
+		display inline-block
+		font($font.body.light)
+		text-transform uppercase
+		letter-spacing 5px
+		color: darken($color.white, 40%)
+		&::before, &::after
+			content ""
+			display inline-block
+			vertical-align middle
+			width 32px
+			margin 0 16px
+			@media(min-width: $screens.pv.bp)
+				width 64px
+				margin 0 8px
+			height 2px
+			background: darken($color.white, 15%)
+.section--light
+	@extend .section
+	background-color: $color.white
+	&__body
+		text-align left
+		color: lighten($color.black, 15%)
+.section--lightgray
+	@extend .section
+	background-color: darken($color.white, 5%)
+	&__body
+		// text-align left
+		color: lighten($color.black, 15%)
+.section--dark
+	@extend .section
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAABBJREFUCB1jYMAD6pHlcHMAJvYBfjsxS60AAAAASUVORK5CYII=') lighten($color.black, 15%)
+	&__foottitle
+		color: $color.white
+		font($font.body.regular)
+		margin 48px 0 32px
+		font-size 22px
+		@media(min-width: $screens.pv.bp)
+			font-size 32px

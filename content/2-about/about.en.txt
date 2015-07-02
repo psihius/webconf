@@ -1,0 +1,25 @@
+Title: About
+
+----
+
+What-title: What is it about?
+
+----
+
+Who-title: Why to participate?
+
+----
+
+Whom-title: Who can attend?
+
+----
+
+What-text: WebConf Riga 2015 is the international professional web developers conference. It covers a wide range of topics such as web application development, project administration, large projects markup and working with databases. Every day after official conference part you will be able to chat with speakers in person.
+
+----
+
+Who-text: We invite you to spend 2 days listening and talking to professional developers sharing experience, to discuss different problems from creating web applications to effective PM and statistic analysis.
+
+----
+
+Whom-text: WebConf will gather all kind of web-development professionals mainly from Baltics, Europe and CIS countries and all those interested in web development and system administration.

@@ -28,3 +28,27 @@ make Kirby work. For more fine-grained configuration
 of the system, please check out http://getkirby.com/docs/advanced/options
 
 */
+
+c::set('languages', array(
+  array(
+    'code'    => 'en',
+    'name'    => 'English',
+    'default' => true,
+    'locale'  => 'en_US',
+    'url'     => '/',
+  ),
+  array(
+    'code'    => 'lv',
+    'name'    => 'Latviešu',
+    'locale'  => 'lv',
+    'url'     => '/lv',
+  ),
+  array(
+    'code'    => 'ru',
+    'name'    => 'Русский',
+    'locale'  => 'ru',
+    'url'     => '/ru',
+  ),
+));
+
+c::set('language.detect', true);

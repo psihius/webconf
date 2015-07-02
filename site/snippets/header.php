@@ -1,22 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-  <title><?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?></title>
-  <meta name="description" content="<?php echo $site->description()->html() ?>">
-  <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
-
-  <?php echo css('assets/css/main.css') ?>
-
-</head>
-<body>
-
-  <header class="header cf" role="banner">
-    <a class="logo" href="<?php echo url() ?>">
-      <img src="<?php echo url('assets/images/logo.svg') ?>" alt="<?php echo $site->title()->html() ?>" />
-    </a>
-    <?php snippet('menu') ?>
-  </header>
+<header class="siteHeader js-siteHeader">
+  <nav role="navigation" class="siteHeader__lang nav js-siteHeaderLang">
+    <? foreach($site->languages() as $language): ?>
+    <? 	if($site->language() !== $language): ?><a href="<?= $page->url($language->code()) ?>" class="nav__item--lang"><?= $language->code() ?></a><? 	endif ?>
+    <? endforeach ?>
+  </nav><a href="#hero" class="siteHeader__logo js-siteHeaderLogo active"><img src="assets/images/logo.svg"/></a>
+  <nav class="siteHeader__mainnav nav--mainnav">
+    <button class="nav__item--hiddenicon js-mainnavOpener active">
+      <svg>
+        <use xlink:href="#icon-hamburger"></use>
+      </svg>
+    </button>
+    <button class="nav__item--hiddenicon js-mainnavCloser">
+      <svg>
+        <use xlink:href="#icon-close"></use>
+      </svg>
+    </button>
+    <div role="navigation" class="nav--mainnav__list js-mainnavList"><a href="#hero" class="nav--mainnav__item--logo js-mainnavItem"><img src="assets/images/logo.svg"/></a><? foreach($pages->visible() as $section): ?><a href="#<?= $section->uid() ?>" class="nav--mainnav__item js-mainnavItem"><?= $section->title() ?></a><? endforeach ?></div>
+  </nav>
+  <nav class="siteHeader__socials nav"><a href="https://www.facebook.com/webconfriga" class="nav__item--icon icon--fb">
+      <svg>
+        <use xlink:href="#icon-facebook"></use>
+      </svg></a><a href="https://twitter.com/webconfriga" class="nav__item--icon icon--tw">
+      <svg>
+        <use xlink:href="#icon-twitter"></use>
+      </svg></a></nav>
+</header>

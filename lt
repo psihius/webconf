@@ -1,0 +1,1 @@
+lt --subdomain webconf --local-host dev2.webconf.lv --port 80

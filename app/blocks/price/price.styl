@@ -1,0 +1,11 @@
+.price
+	&::after, &::before
+		content "€"
+		font-size .5em
+		margin 0 .2em
+		letter-spacing 0
+		vertical-align 50%
+	html(lang="en") &::after
+		display none
+	html(lang="lv") &::before, html(lang="ru") &::before
+		display none

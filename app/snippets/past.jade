@@ -1,0 +1,34 @@
+section#past.section.js-section.past
+	.section__head
+		h3.section__title <?= l::get("past-events-title") ?>
+	.section__body.pastevents
+		.pastevents__item.pastevent
+			.pastevent__head
+				h4.pastevent__title <?= $data->conf1_title() ?>
+			.pastevent__body.stat--past
+				.stat--past__item
+					.stat--past__value <?= $data->conf1_stat1() ?>
+					.stat--past__label <?= l::get("speaches") ?>
+				.stat--past__item
+					.stat--past__value <?= $data->conf1_stat2() ?>
+					.stat--past__label <?= l::get("participants") ?>
+				.stat--past__item
+					.stat--past__value <?= $data->conf1_stat3() ?>
+					.stat--past__label <?= l::get("hours") ?>
+		.pastevents__item.pastevent
+			.pastevent__head
+				h4.pastevent__title <?= $data->conf2_title() ?>
+			.pastevent__body.stat--past
+				.stat--past__item
+					.stat--past__value <?= $data->conf2_stat1() ?>
+					.stat--past__label <?= l::get("speaches") ?>
+				.stat--past__item
+					.stat--past__value <?= $data->conf2_stat2() ?>
+					.stat--past__label <?= l::get("participants") ?>
+				.stat--past__item
+					.stat--past__value <?= $data->conf2_stat3() ?>
+					.stat--past__label <?= l::get("hours") ?>
+				.stat--past__concat ×
+				.stat--past__item
+					.stat--past__value <?= $data->conf2_stat4() ?>
+					.stat--past__label <?= l::get("halls") ?>
