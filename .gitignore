@@ -4,3 +4,5 @@
 /thumbs/*
 /node_modules
 /_temp
+.idea
+.vagrant
