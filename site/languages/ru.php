@@ -5,11 +5,11 @@ l::set('participate', 'Участвовать');
 l::set('sponsor', 'Спонсорство');
 
 l::set('past-events-title', 'Прошедшие мероприятия');
-l::set('speaches', 'Доклады');
-l::set('participants', 'Участники');
+l::set('speaches', 'Докладов');
+l::set('participants', 'Участников');
 l::set('hours', 'Часов');
 l::set('in', 'в');
-l::set('halls', 'Залах');
+l::set('halls', 'Залов');
 l::set('get press release', 'Получить пресс-релиз');
 l::set('want to participate', 'Хотите участвовать?');
 l::set('contact us', 'Свяжитесь с нами');
