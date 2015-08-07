@@ -1,9 +1,0 @@
-Success: Thank you, the form was sent successfully
-
-----
-
-Fail: There was an error sending the form
-
-----
-
-Title: Contact Form Submit

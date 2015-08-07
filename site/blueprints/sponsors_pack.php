@@ -11,6 +11,7 @@ fields:
 		label: Type
 		type: select
 		options:
+			bronze: bronze
 			silver: silver
 			gold: gold
 			general: general

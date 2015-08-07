@@ -1,5 +1,49 @@
 <?php
 
+
+
+l::set('participate', 'Piedālīties');
+l::set('sponsor', 'Sponsoriem');
+
+l::set('past-events-title', 'Прошедшие мероприятия');
+l::set('speaches', 'Докладов');
+l::set('participants', 'Участников');
+l::set('hours', 'Часов');
+l::set('in', 'в');
+l::set('halls', 'Залов');
+l::set('get press release', 'Lejupielādēt Preses relīzi');
+l::set('want to participate', 'Хотите участвовать?');
+l::set('contact us', 'Sazinieties ar mums');
+l::set('learn more', 'Sīkāk');
+
+l::set('form name', 'Vārds');
+l::set('form email', 'Email');
+l::set('form message', 'Zīņojums');
+l::set('form submit', 'Nosūtīt');
+
+l::set('uniform-filled-potty', 'Поле, которое должно быть пустым, вдруг оказалось заполненым. Если вы не являетесь спам-ботом, пожалуйста попробуйте еще раз и оставьте это поле пустым.');
+l::set('uniform-fields-required', 'Пожалуйста заполните обязательные поля.');
+l::set('uniform-fields-not-valid', 'В некоторых полях содержатся недопустимые данные.');
+
+l::set('uniform-email-subject', 'Сообщение из веб-формы');
+l::set('uniform-email-success', 'Спасибо, форма была успешно отправлена.');
+l::set('uniform-email-error', 'К сожалению, произошли ошибки при отправке формы:');
+l::set('uniform-email-copy', 'Kopija:');
+
+l::set('uniform-calc-plus', 'pluss');
+
+l::set('uniform-log-success', 'Была добавлена запись в логах.');
+l::set('uniform-log-error', 'Произошла ошибка записи в лог-файл.');
+
+l::set('uniform-login-error', 'Неправильное имя пользователя или пароль.');
+l::set('uniform-login-success', 'Вход выполнен успешно.');
+
+l::set('uniform-webhook-success', 'Вызов веб-хука был успешным.');
+l::set('uniform-webhook-error', 'Произошла ошибка вызова веб-хука: ');
+
+l::set('uniform-email-select-error', 'Неправильный получатель.');
+
+
 l::set('date-format','%d. %s %d.');
 
 l::set('month-01','janvāris');
