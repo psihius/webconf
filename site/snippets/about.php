@@ -11,10 +11,6 @@
       <div class="about__body">
         <div class="bodytext"><?= kirbytext($data->what_text()) ?></div>
       </div>
-      <div class="about__foot"><a href="#press_release" class="button--ghost_neutral"><span class="button--ghost_neutral__icon">
-            <svg>
-              <use xlink:href="#icon-arrow-download"></use>
-            </svg></span><?= l::get("get press release") ?></a></div>
     </div>
     <div class="aboutlist__item about">
       <div class="about__head">
