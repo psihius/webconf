@@ -1,7 +1,6 @@
 <?php
 
 
-
 l::set('participate', 'Piedālīties');
 l::set('sponsor', 'Sponsoriem');
 
@@ -9,6 +8,7 @@ l::set('past-events-title', 'Прошедшие мероприятия');
 l::set('speaches', 'Докладов');
 l::set('participants', 'Участников');
 l::set('hours', 'Часов');
+l::set('vat', 'PVN');
 l::set('in', 'в');
 l::set('halls', 'Залов');
 l::set('get press release', 'Lejupielādēt Preses relīzi');

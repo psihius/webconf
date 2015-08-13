@@ -1,5 +1,6 @@
 <?php
 
+
 l::set('participate', 'Participate');
 l::set('sponsor', 'Sponsor us');
 
@@ -7,6 +8,7 @@ l::set('past-events-title', 'Past events');
 l::set('speaches', 'Speaches');
 l::set('participants', 'Participants');
 l::set('hours', 'Hours');
+l::set('vat', 'VAT');
 l::set('in', 'in');
 l::set('halls', 'Halls');
 l::set('get press release', 'Get press release');
