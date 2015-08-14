@@ -13,7 +13,7 @@ l::set('in', 'in');
 l::set('halls', 'Halls');
 l::set('get press release', 'Get press release');
 l::set('want to participate', 'Want to participate?');
-l::set('contact us', 'Contact us');
+l::set('contact us', 'Get in touch');
 l::set('learn more', 'Learn more');
 
 l::set('form name', 'Name');
