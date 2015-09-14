@@ -18,12 +18,14 @@
 		$mainnavItems.each(function () {
 			var $item = $(this);
 			var $section = $($item.attr("href"));
-			if ($section.position().top - siteHeaderHeight <= curWindowTop && $section.position().top + $section.outerHeight() - siteHeaderHeight > curWindowTop) {
-				$mainnavItems.removeClass("active");
-				$item.addClass("active");
-			}
-			else{
-				$item.removeClass("active");
+			if($section.length){
+				if ($section.position().top - siteHeaderHeight <= curWindowTop && $section.position().top + $section.outerHeight() - siteHeaderHeight > curWindowTop) {
+					$mainnavItems.removeClass("active");
+					$item.addClass("active");
+				}
+				else{
+					$item.removeClass("active");
+				}
 			}
 		});
 	}
