@@ -16,7 +16,9 @@
         <use xlink:href="#icon-close"></use>
       </svg>
     </button>
-    <div role="navigation" class="nav--mainnav__list js-mainnavList"><a href="#hero" class="nav--mainnav__item--logo js-mainnavItem"><img src="assets/images/logo.svg"/></a><? foreach($pages->visible() as $section): ?><a href="#<?= $section->uid() ?>" class="nav--mainnav__item js-mainnavItem"><?= $section->title() ?></a><? endforeach ?></div>
+    <div role="navigation" class="nav--mainnav__list js-mainnavList"><a href="#hero" class="nav--mainnav__item--logo js-mainnavItem"><img src="assets/images/logo.svg"/></a><? foreach($pages->visible()->not('tickets') as $section): ?><a href="#<?= $section->uid() ?>" class="nav--mainnav__item js-mainnavItem"><?= $section->title() ?></a><? endforeach ?>
+      <? $tickets = $pages->find('tickets') ?><a href="#<?= $tickets->uid() ?>" class="nav--mainnav__item--button js-mainnavItem"><span class="button--ghost_accent_tiny"><?= $tickets->title() ?></span></a>
+    </div>
   </nav>
   <nav class="siteHeader__socials nav"><a href="https://www.facebook.com/webconfriga" class="nav__item--icon icon--fb">
       <svg>
