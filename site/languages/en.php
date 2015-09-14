@@ -140,6 +140,7 @@ l::set('latest-posts','Pēdējie raksti');
 l::set('teacher_profile','Profils');
 
 l::set('alt_icon','Ikona');
+l::set('buy_ticket','Buy ticket');
 
 
 
