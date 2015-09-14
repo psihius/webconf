@@ -20,7 +20,9 @@
 	background none
 	border-width 2px
 	border-style solid
-	padding .75em 1.5em
+	padding .5em 1em
+	@media(min-width: $screens.th.bp)
+		padding .75em 1.5em
 	transition all .3s
 	&:hover
 		color: $color.white
@@ -46,6 +48,11 @@
 	fill: @color
 	&:hover
 		background-color: $color.accent
+
+.button--ghost_accent_tiny
+	@extend .button, .button--ghost, .button--ghost_accent
+	padding .08em 1.5em
+	border-width 1px
 
 .button--ghost_neutral
 	@extend .button, .button--ghost
