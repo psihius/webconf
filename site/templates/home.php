@@ -7,5 +7,6 @@
       <? foreach($pages->visible() as $section): ?>
       <? snippet($section->uid(), array('data' => $section)) ?>
       <? endforeach ?></main><? snippet('footer') ?>
+    <? snippet('ga') ?>
   </body>
 </html>
