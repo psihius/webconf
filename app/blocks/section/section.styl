@@ -1,5 +1,6 @@
 .section
 	padding 48px 24px
+	clearfix()
 	@media(min-width: $screens.pv.bp)
 		padding 64px 48px
 	text-align center
@@ -10,39 +11,61 @@
 			padding 0 0 48px
 	&__title
 		font-size 16px
-		@media(min-width: $screens.pv.bp)
-			font-size 22px
+		letter-spacing 1px
 		display inline-block
 		font($font.body.light)
 		text-transform uppercase
-		letter-spacing 5px
-		color: darken($color.white, 40%)
+		color: darken($color.white, 50%)
+		margin -16px 0
+		@media(min-width: $screens.pv.bp)
+			font-size 18px
+			letter-spacing 1px
+			margin 0
+		@media(min-width: $screens.tv.bp)
+			font-size 22px
+			letter-spacing 5px
 		&::before, &::after
 			content ""
-			display inline-block
+			display block
 			vertical-align middle
-			width 32px
-			margin 0 16px
+			width 24px
+			margin 16px auto
+			height 1px
+			background: darken($color.white, 75%)
 			@media(min-width: $screens.pv.bp)
-				width 64px
+				display inline-block
+				width 32px
 				margin 0 8px
-			height 2px
-			background: darken($color.white, 15%)
+			@media(min-width: $screens.tv.bp)
+				margin 0 16px
+				width 64px
+				height 2px
 .section--light
 	@extend .section
 	background-color: $color.white
+	&__title
+		color: darken($color.white, 50%)
+		&::before, &::after
+			background: darken($color.white, 25%)
 	&__body
 		text-align left
 		color: lighten($color.black, 15%)
 .section--lightgray
 	@extend .section
 	background-color: darken($color.white, 5%)
+	&__title
+		color: darken($color.white, 50%)
+		&::before, &::after
+			background: darken($color.white, 25%)
 	&__body
-		// text-align left
 		color: lighten($color.black, 15%)
 .section--dark
 	@extend .section
 	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAABBJREFUCB1jYMAD6pHlcHMAJvYBfjsxS60AAAAASUVORK5CYII=') lighten($color.black, 15%)
+	&__title
+		color: darken($color.white, 50%)
+		&::before, &::after
+			background: darken($color.white, 75%)
 	&__foottitle
 		color: $color.white
 		font($font.body.regular)
