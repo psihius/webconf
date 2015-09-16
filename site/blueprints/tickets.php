@@ -6,3 +6,6 @@ fields:
 	title:
 		label: Title
 		type:	text
+	foot:
+		label: Foot
+		type:	textarea
