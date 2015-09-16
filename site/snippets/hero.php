@@ -1,5 +1,10 @@
 
 <section id="hero" class="hero js-section">
+  <? $hero = $site->find("hero") ?>
+  <? if($hero->hasImages()): ?>
+  <div class="slideshow"><? foreach($hero->images() as $image): ?>
+    <div style="background-image: url(<?= thumb($image, array('width' => 1920, 'height' => 1080))->url(); ?>)" class="slideshow__item"></div><? endforeach ?>
+  </div><? endif ?>
   <div class="wrapper hero__wrapper">
     <div class="hero__pretitle">
       <date class="hero__date"><?= $site->conf_date() ?></date>, <span class="hero__place"><?= $site->conf_place() ?></span>

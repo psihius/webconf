@@ -1,10 +1,10 @@
 
 <section id="contact" class="section--lightgray js-section">
   <div class="wrapper">
-    <div class="section--light__head">
-      <h1 class="section--light__title"><?= $data->title() ?></h1>
+    <div class="section--lightgray__head">
+      <h1 class="section--lightgray__title"><?= $data->title() ?></h1>
     </div>
-    <div class="section--light__body">
+    <div class="section--lightgray__body">
       <form action="<?= url('contact/contact-form-submit') ?>" method="post" id="contactForm" class="form">
         <div class="form__body">
           <div class="form__cols">
