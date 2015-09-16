@@ -9,5 +9,6 @@
         <iframe src="//eventbrite.com/tickets-external?eid=18584573961&amp;ref=etckt" frameborder="0" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true" class="tickets__iframe"></iframe>
       </div>
     </div>
+    <div class="section--lightgray__foot"><?= kirbytext($data->foot()) ?></div>
   </div>
 </section>
