@@ -1,0 +1,17 @@
+.speakers
+	@media(min-width: $screens.tv.bp)
+		display flex
+		flex-wrap wrap
+		margin 0 -24px
+	@media(min-width: $screens.th.bp)
+		margin 0
+	&__item
+		margin 12px 10px
+		@media(min-width: $screens.tv.bp)
+			margin 12px 24px
+			flex 1 1 300px
+		@media(min-width: $screens.th.bp)
+			margin 12px 30px
+		@media(min-width: $screens.ds.bp)
+			flex 1 1 400px
+			margin 12px 32px

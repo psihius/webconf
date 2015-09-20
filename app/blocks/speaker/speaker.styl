@@ -1,0 +1,42 @@
+.speaker
+	&__photo
+		margin 0 auto 20px
+		width 100px
+		height 100px
+		overflow hidden
+		border-radius 50%
+		position relative
+		img
+			position abscenter
+	&__photo--blank
+		@extend .speaker__photo
+		background-color: lighten($color.black, 10%)
+		fill: lighten($color.black, 20%)
+		svg
+			width 50%
+			height 50%
+			position abscenter
+	&__fullname
+		text-align center
+		font($font.body.semibold)
+		color: $color.accent
+		font-size 18px
+		@media(min-width: $screens.tv.bp)
+			font-size 24px
+	&__bio
+		text-align center
+		font($font.body.light)
+		color: darken($color.white, 50%)
+	&__speach
+		border-top: 1px dotted lighten($color.black, 40%)
+		padding 20px 0
+		color: darken($color.white, 30%)
+		font-size 16px
+		line-height 1.5
+		font($font.body.light)
+		@media(min-width: $screens.tv.bp)
+			font-size 18px
+		h3
+			color: darken($color.white, 10%)
+		p
+			margin 16px 0
