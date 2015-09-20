@@ -80,3 +80,8 @@
 		font-size 22px
 		@media(min-width: $screens.pv.bp)
 			font-size 32px
+	a
+		&, &:link, &:visited
+			color: lighten($color.main, 50%)
+		&:hover, &:active
+			color: $color.accent

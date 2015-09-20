@@ -140,6 +140,6 @@ l::set('teacher_profile','Profils');
 
 l::set('alt_icon','Ikona');
 l::set('buy_ticket','Pirkt biļeti');
-
+l::set('speaches','Lekcijas');
 
 ?>

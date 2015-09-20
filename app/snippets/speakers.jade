@@ -8,17 +8,20 @@ section#speakers.section--dark.js-section
 			.speakers__item.speaker
 				<? if ($photo = $speaker->image("photo.jpg")): ?>
 				.speaker__photo
-					<?= thumb($photo, array('width' => 100, 'height' => 100, 'crop' => true, 'title' => $speaker->title(), 'quality' => 80)) ?>
+					<?= thumb($photo, array('width' => 128, 'height' => 128, 'crop' => true, 'title' => $speaker->title(), 'quality' => 80)) ?>
 				<? else: ?>
 				.speaker__photo--blank
 					svg: use(xlink:href="#icon-profile")
 				<? endif ?>
-				.speaker__fullname <?= $speaker->title() ?>
+				.speaker__profile
+					.speaker__fullname <?= $speaker->title() ?>
 				<? if ($speaker->bio()->isNotEmpty()): ?>
 				.speaker__bio <?= kirbytext($speaker->bio()) ?>
 				<? endif ?>
 				<? if ($speaker->speach()->isNotEmpty()): ?>
-				.speaker__speach <?= kirbytext($speaker->speach()) ?>
+				.speaker__speach
+					.speaker__speach_title <?= l::get("speaches") ?>
+					.speaker__speach_text <?= kirbytext($speaker->speach()) ?>
 				<? endif ?>
 			<? endforeach ?>
 		<? endif ?>

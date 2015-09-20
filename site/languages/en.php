@@ -141,6 +141,7 @@ l::set('teacher_profile','Profils');
 
 l::set('alt_icon','Ikona');
 l::set('buy_ticket','Buy ticket');
+l::set('speaches','Speaches');
 
 
 
