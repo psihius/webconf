@@ -2,11 +2,13 @@ size = 32px
 .nav
 	margin 0 -4px
 	&__item
-		margin 0 8px
 		display inline-block
 		vertical-align middle
 		text-align center
 		white-space nowrap
+		margin 0 8px
+		@media(min-width: $screens.th.bp) and (max-width: $screens.ds.bp - 1)
+			margin 0 6px
 	&__item--icon
 		@extend .nav__item
 		height: size
@@ -72,9 +74,13 @@ size = 32px
 			padding 1em 12px
 		@media(min-width: $screens.th.bp)
 			padding 12px 6px
-			font-size 16px
+			font-size 14px
 			flex none
 		@media(min-width: $screens.ds.bp)
+			padding 12px 6px
+			font-size 16px
+			flex none
+		@media(min-width: $screens.dw.bp)
 			padding 12px
 
 		&.active
@@ -85,10 +91,12 @@ size = 32px
 		flex 2 1 0%
 		padding 0 12px .5em
 		@media(min-width: $screens.tv.bp)
-			padding 1em 12px
+			padding 16px 12px
 			margin-top 0
 		@media(min-width: $screens.th.bp)
 			flex none
+			padding-left 8px
+			padding-right 8px
 		img
 			width 150px
 			margin 0 auto
