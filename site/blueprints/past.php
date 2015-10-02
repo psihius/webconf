@@ -14,7 +14,7 @@ fields:
 		label: Conf 1 Title
 		type: text
 	conf1_stat1:
-		label: Speaches
+		label: Speeches
 		type: text
 		width: 1/4
 	conf1_stat2:
@@ -33,7 +33,7 @@ fields:
 		label: Conf 2 Title
 		type: text
 	conf2_stat1:
-		label: Speaches
+		label: Speeches
 		type: text
 		width: 1/4
 	conf2_stat2:

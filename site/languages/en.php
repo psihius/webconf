@@ -5,7 +5,7 @@ l::set('participate', 'Participate');
 l::set('sponsor', 'Sponsor us');
 
 l::set('past-events-title', 'Past events');
-l::set('speaches', 'Speaches');
+l::set('speeches', 'Speeches');
 l::set('participants', 'Participants');
 l::set('hours', 'Hours');
 l::set('vat', 'VAT');
@@ -141,7 +141,7 @@ l::set('teacher_profile','Profils');
 
 l::set('alt_icon','Ikona');
 l::set('buy_ticket','Buy ticket');
-l::set('speaches','Speaches');
+l::set('speeches','Speeches');
 
 
 

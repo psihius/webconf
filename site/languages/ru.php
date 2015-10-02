@@ -5,7 +5,7 @@ l::set('participate', 'Участвовать');
 l::set('sponsor', 'Спонсорство');
 
 l::set('past-events-title', 'Прошедшие мероприятия');
-l::set('speaches', 'Докладов');
+l::set('speeches', 'Докладов');
 l::set('participants', 'Участников');
 l::set('hours', 'Часов');
 l::set('vat', 'НДС');
@@ -148,6 +148,6 @@ l::set('module_next','Переход на следующие модули');
 
 l::set('no','Нет');
 l::set('buy_ticket','Купить билет');
-l::set('speaches','Доклады');
+l::set('speeches','Доклады');
 
 ?>

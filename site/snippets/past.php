@@ -11,7 +11,7 @@
       <div class="pastevent__body stat--past">
         <div class="stat--past__item">
           <div class="stat--past__value"><?= $data->conf1_stat1() ?></div>
-          <div class="stat--past__label"><?= l::get("speaches") ?></div>
+          <div class="stat--past__label"><?= l::get("speeches") ?></div>
         </div>
         <div class="stat--past__item">
           <div class="stat--past__value"><?= $data->conf1_stat2() ?></div>
@@ -30,7 +30,7 @@
       <div class="pastevent__body stat--past">
         <div class="stat--past__item">
           <div class="stat--past__value"><?= $data->conf2_stat1() ?></div>
-          <div class="stat--past__label"><?= l::get("speaches") ?></div>
+          <div class="stat--past__label"><?= l::get("speeches") ?></div>
         </div>
         <div class="stat--past__item">
           <div class="stat--past__value"><?= $data->conf2_stat2() ?></div>

@@ -18,7 +18,7 @@
         <div class="speaker__bio"><?= kirbytext($speaker->bio()) ?></div><? endif ?>
         <? if ($speaker->speach()->isNotEmpty()): ?>
         <div class="speaker__speach">
-          <div class="speaker__speach_title"><?= l::get("speaches") ?></div>
+          <div class="speaker__speach_title"><?= l::get("speeches") ?></div>
           <div class="speaker__speach_text"><?= kirbytext($speaker->speach()) ?></div>
         </div><? endif ?>
       </div><? endforeach ?>

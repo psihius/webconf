@@ -5,7 +5,7 @@ l::set('participate', 'Piedālīties');
 l::set('sponsor', 'Sponsoriem');
 
 l::set('past-events-title', 'Pagājušie pasākumi');
-l::set('speaches', 'Zīņojumi');
+l::set('speeches', 'Zīņojumi');
 l::set('participants', 'Dalībnieki');
 l::set('hours', 'Stundas');
 l::set('vat', 'PVN');
@@ -140,6 +140,6 @@ l::set('teacher_profile','Profils');
 
 l::set('alt_icon','Ikona');
 l::set('buy_ticket','Pirkt biļeti');
-l::set('speaches','Lekcijas');
+l::set('speeches','Lekcijas');
 
 ?>

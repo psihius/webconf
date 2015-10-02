@@ -20,7 +20,7 @@ section#speakers.section--dark.js-section
 				<? endif ?>
 				<? if ($speaker->speach()->isNotEmpty()): ?>
 				.speaker__speach
-					.speaker__speach_title <?= l::get("speaches") ?>
+					.speaker__speach_title <?= l::get("speeches") ?>
 					.speaker__speach_text <?= kirbytext($speaker->speach()) ?>
 				<? endif ?>
 			<? endforeach ?>
