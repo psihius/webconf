@@ -1,0 +1,9 @@
+section#tickets.section--lightgray.js-section
+	.wrapper
+		.section--lightgray__head
+			h1.section--lightgray__title <?= $data->title() ?>
+		.section--lightgray__body
+			.tickets
+				iframe(src="//eventbrite.com/tickets-external?eid=18584573961&ref=etckt" frameborder="0" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true").tickets__iframe
+		.section--lightgray__foot
+			<?= kirbytext($data->foot()) ?>

@@ -13,9 +13,12 @@ header.siteHeader.js-siteHeader
 			svg: use(xlink:href="#icon-close")
 		.nav--mainnav__list(role="navigation").js-mainnavList
 			a(href!="#hero").nav--mainnav__item--logo.js-mainnavItem: img(src="assets/images/logo.svg")
-			<? foreach($pages->visible() as $section): ?>
+			<? foreach($pages->visible()->not(array('tickets','past')) as $section): ?>
 			a(href!="#<?= $section->uid() ?>").nav--mainnav__item.js-mainnavItem <?= $section->title() ?>
 			<? endforeach ?>
+			<? $tickets = $pages->find('tickets') ?>
+			a(href!="#<?= $tickets->uid() ?>").nav--mainnav__item--button.js-mainnavItem
+				span.button--ghost_accent_tiny <?= $tickets->title() ?>
 	nav.siteHeader__socials.nav
 		a(href="https://www.facebook.com/webconfriga").nav__item--icon.icon--fb
 			svg: use(xlink:href="#icon-facebook")

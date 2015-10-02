@@ -3,5 +3,13 @@
 	justify-content center
 	&__item
 		margin 0 8px
+		flex 1 1 0%
 		@media(min-width: $screens.pv.bp)
 			margin 0 12px
+			flex none
+	&__item--ru-ext
+		@extend .buttons__item
+		[lang='ru'] &
+			flex 1.25 1 0%
+			@media(min-width: $screens.pv.bp)
+				flex none

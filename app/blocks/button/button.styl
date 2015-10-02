@@ -4,7 +4,7 @@
 	@media(min-width: $screens.pv.bp)
 		width auto
 	display inline-block
-	html(lang="en") &
+	html[lang="en"] &
 		text-transform capitalize
 	&__icon
 		display inline-block
@@ -20,39 +20,56 @@
 	background none
 	border-width 2px
 	border-style solid
-	padding .75em 1.5em
+	padding .5em 1em
+	@media(min-width: $screens.th.bp)
+		padding .75em 1.5em
 	transition all .3s
-	&:hover
-		color: $color.white
-		fill: @color
 .button--ghost_main
 	@extend .button, .button--ghost
-	color: lighten($color.main,50%)
 	border-color: @color
-	fill: @color
-	&:hover
+	&, &:link, &:visited
+		color: lighten($color.main,50%)
+		fill: @color
+	&:hover, &:active
+		color: $color.white
+		fill: @color
 		background-color: $color.main
 		border-color: @background-color
 .button--ghost_main_active
 	@extend .button, .button--ghost, .button--ghost_main
-	color: $color.main
-	border-color: @color
-	fill: @color
+	&, &:link, &:visited
+		color: $color.main
+		fill: @color
+		border-color: @color
+	&:hover, &:active
+		color: $color.white
+		fill: @color
+		background-color: $color.main
+		border-color: @background-color
 
 .button--ghost_accent
 	@extend .button, .button--ghost
-	color: $color.accent
-	border-color: @color
-	fill: @color
-	&:hover
+	&, &:link, &:visited
+		color: $color.accent
+		fill: @color
+		border-color: @color
+	&:hover, &:active
 		background-color: $color.accent
+		color: $color.white
+		fill: @color
+
+.button--ghost_accent_tiny
+	@extend .button, .button--ghost, .button--ghost_accent
+	padding .08em 1.5em
+	border-width 1px
 
 .button--ghost_neutral
 	@extend .button, .button--ghost
-	color: lighten($color.black, 50%)
-	border-color: lighten(@color, 25%)
-	fill: @color
-	&:hover
+	&, &:link, &:visited
+		color: lighten($color.black, 50%)
+		border-color: lighten(@color, 25%)
+		fill: @color
+	&:hover, &:active
 		background-color: lighten($color.black, 50%)
 		border-color: @background-color
 

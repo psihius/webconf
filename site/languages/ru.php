@@ -8,6 +8,7 @@ l::set('past-events-title', 'Прошедшие мероприятия');
 l::set('speaches', 'Докладов');
 l::set('participants', 'Участников');
 l::set('hours', 'Часов');
+l::set('vat', 'НДС');
 l::set('in', 'в');
 l::set('halls', 'Залов');
 l::set('get press release', 'Получить пресс-релиз');
@@ -146,6 +147,7 @@ l::set('module_dep','Зависимость от других модулей');
 l::set('module_next','Переход на следующие модули');
 
 l::set('no','Нет');
-
+l::set('buy_ticket','Купить билет');
+l::set('speaches','Доклады');
 
 ?>

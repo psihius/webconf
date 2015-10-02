@@ -1,0 +1,18 @@
+.speakers
+	@media(min-width: $screens.tv.bp)
+		display flex
+		flex-wrap wrap
+		justify-content center
+		margin 0 -24px
+	@media(min-width: $screens.th.bp)
+		margin 0
+	&__item
+		margin 12px 10px
+		max-width 500px
+		@media(min-width: $screens.tv.bp)
+			margin 12px 24px 24px
+			flex 1 1 400px
+		@media(min-width: $screens.th.bp)
+			margin 12px 30px 24px
+		@media(min-width: $screens.ds.bp)
+			margin 12px 32px 24px

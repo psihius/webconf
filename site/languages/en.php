@@ -1,5 +1,6 @@
 <?php
 
+
 l::set('participate', 'Participate');
 l::set('sponsor', 'Sponsor us');
 
@@ -7,11 +8,12 @@ l::set('past-events-title', 'Past events');
 l::set('speaches', 'Speaches');
 l::set('participants', 'Participants');
 l::set('hours', 'Hours');
+l::set('vat', 'VAT');
 l::set('in', 'in');
 l::set('halls', 'Halls');
 l::set('get press release', 'Get press release');
 l::set('want to participate', 'Want to participate?');
-l::set('contact us', 'Contact us');
+l::set('contact us', 'Get in touch');
 l::set('learn more', 'Learn more');
 
 l::set('form name', 'Name');
@@ -138,6 +140,8 @@ l::set('latest-posts','Pēdējie raksti');
 l::set('teacher_profile','Profils');
 
 l::set('alt_icon','Ikona');
+l::set('buy_ticket','Buy ticket');
+l::set('speaches','Speaches');
 
 
 

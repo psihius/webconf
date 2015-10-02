@@ -8,10 +8,10 @@ section#about.section--light.js-section
 			.about__body
 				.bodytext
 					<?= kirbytext($data->what_text()) ?>
-			.about__foot
-				a(href="#press_release").button--ghost_neutral
-					span.button--ghost_neutral__icon: svg: use(xlink:href="#icon-arrow-download")
-					<?= l::get("get press release") ?>
+			//- .about__foot
+			//- 	a(href="#press_release").button--ghost_neutral
+			//- 		span.button--ghost_neutral__icon: svg: use(xlink:href="#icon-arrow-download")
+			//- 		<?= l::get("get press release") ?>
 		.aboutlist__item.about
 			.about__head
 				h2.about__title <?= kirbytext($data->who_title()) ?>

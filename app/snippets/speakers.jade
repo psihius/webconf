@@ -1,0 +1,30 @@
+section#speakers.section--dark.js-section
+	.section--dark__head
+		h1.section--dark__title <?= $data->title() ?>
+	.section--dark__body
+		<? if($data->hasChildren()): ?>
+		.speakers
+			<? foreach($data->children() as $speaker): ?>
+			.speakers__item.speaker
+				<? if ($photo = $speaker->image("photo.jpg")): ?>
+				.speaker__photo
+					<?= thumb($photo, array('width' => 128, 'height' => 128, 'crop' => true, 'title' => $speaker->title(), 'quality' => 80)) ?>
+				<? else: ?>
+				.speaker__photo--blank
+					svg: use(xlink:href="#icon-profile")
+				<? endif ?>
+				.speaker__profile
+					.speaker__fullname <?= $speaker->title() ?>
+				<? if ($speaker->bio()->isNotEmpty()): ?>
+				.speaker__bio <?= kirbytext($speaker->bio()) ?>
+				<? endif ?>
+				<? if ($speaker->speach()->isNotEmpty()): ?>
+				.speaker__speach
+					.speaker__speach_title <?= l::get("speaches") ?>
+					.speaker__speach_text <?= kirbytext($speaker->speach()) ?>
+				<? endif ?>
+			<? endforeach ?>
+		<? endif ?>
+	//- .section--dark__foot
+	//- 	h3.section--dark__foottitle <?= $data->foottitle() ?>
+	//- 	a(href="#contact").button--ghost_accent.button--lg.js-scrollTo <?= l::get("contact us") ?>

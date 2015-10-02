@@ -10,7 +10,9 @@ section#sponsors.section--dark.js-section
 			div(class!="sponsorspack<?= $mod ?>__head") <?= $pack->title() ?>
 			div(class!="sponsorspack<?= $mod ?>__body") <?= kirbytext($pack->benefits()) ?>
 			div(class!="sponsorspack<?= $mod ?>__foot")
-				span.price <?= $pack->price() ?>
+				span.price
+					span.price__value <?= $pack->price() ?>
+					span.price__label <?= l::get("vat") ?>
 		<? endforeach ?>
 		<? endif ?>
 	.section--dark__foot

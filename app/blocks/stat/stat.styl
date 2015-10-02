@@ -7,6 +7,7 @@
 		font-size 18px
 		line-height 32px
 		margin 0 -0.6em 0 -0.3em
+		color: alpha($color.accent, .5)
 		@media(min-width: $screens.pv.bp)
 			font-size 20px
 			line-height 48px
@@ -15,22 +16,19 @@
 			font-size 24px
 			line-height 64px
 			margin 0 -1.3em 0 -0.7em
-		color: alpha($color.accent, .5)
-
-
-		//
 	&__value
 		color: $color.accent
 		font($font.body.light)
 	&__label
 		text-transform uppercase
 		font($font.body.regular)
-		margin-top 12px
-		font-size 11px
+		margin-top 8px
+		font-size 9px
 		letter-spacing 1px
 		@media(min-width: $screens.pv.bp)
 			font-size 16px
 			letter-spacing 2px
+			margin-top 12px
 .stat--past
 	@extend .stat
 	&__value

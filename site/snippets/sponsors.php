@@ -11,7 +11,7 @@
     <div class="sponsorspacks__item sponsorspack<?= $mod ?>">
       <div class="sponsorspack<?= $mod ?>__head"><?= $pack->title() ?></div>
       <div class="sponsorspack<?= $mod ?>__body"><?= kirbytext($pack->benefits()) ?></div>
-      <div class="sponsorspack<?= $mod ?>__foot"><span class="price"><?= $pack->price() ?></span></div>
+      <div class="sponsorspack<?= $mod ?>__foot"><span class="price"><span class="price__value"><?= $pack->price() ?></span><span class="price__label"><?= l::get("vat") ?></span></span></div>
     </div><? endforeach ?>
     <? endif ?>
   </div>

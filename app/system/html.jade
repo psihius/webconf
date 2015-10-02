@@ -3,15 +3,8 @@ doctype
 html(lang!="<?= $site->language() ?>")
 	<? snippet('head') ?>
 	body
+		<? snippet('ga') ?>
 		<? include_once('assets/images/svg-defs.svg') ?>
-		
-		<? $hero = $site->find("hero") ?>
-		<? if($hero->hasImages()): ?>
-		.slideshow
-			<? foreach($hero->images() as $image): ?>
-			.slideshow__item(style!="background-image: url(<?= thumb($image, array('width' => 1920, 'height' => 1080))->url(); ?>)")
-			<? endforeach ?>
-		<? endif ?>
 		
 		<? snippet('header') ?>
 		main
