@@ -4,7 +4,7 @@
     <h1 class="section--dark__title"><?= $data->title() ?></h1>
   </div>
   <div class="section--dark__body"><? if($data->hasChildren()): ?>
-    <div class="speakers"><? foreach($data->children() as $speaker): ?>
+    <div class="speakers"><? foreach($data->children()->visible() as $speaker): ?>
       <div class="speakers__item speaker"><? if ($photo = $speaker->image("photo.jpg")): ?>
         <div class="speaker__photo"><?= thumb($photo, array('width' => 128, 'height' => 128, 'crop' => true, 'title' => $speaker->title(), 'quality' => 80)) ?></div><? else: ?>
         <div class="speaker__photo--blank">

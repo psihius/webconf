@@ -4,7 +4,7 @@ section#speakers.section--dark.js-section
 	.section--dark__body
 		<? if($data->hasChildren()): ?>
 		.speakers
-			<? foreach($data->children() as $speaker): ?>
+			<? foreach($data->children()->visible() as $speaker): ?>
 			.speakers__item.speaker
 				<? if ($photo = $speaker->image("photo.jpg")): ?>
 				.speaker__photo
