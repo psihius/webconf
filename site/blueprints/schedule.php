@@ -21,7 +21,7 @@ fields:
 		type: text
 	afterparty_desc:
 		label: Afteparty Desc
-		type: text
+		type: textarea
 	afterparty:
 		label: Afterparty
 		type: textarea
