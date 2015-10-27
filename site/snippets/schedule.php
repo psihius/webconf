@@ -8,7 +8,9 @@
       <? $day1 = yaml($data->day1()) ?>
       <? if(!empty($day1)): ?>
       <table class="t schedule">
-        <caption class="schedule__caption"><?= $data->day1_title() ?></caption>
+        <caption class="schedule__caption"><?= $data->day1_title() ?>
+          <div class="schedule__desc"><?= $data->day1_desc() ?></div>
+        </caption>
         <tbody class="t-body"><? foreach($day1 as $line): ?>
           <tr class="t-body__tr">
             <td class="t-body__td--time"><?= $line["time"] ?></td>
@@ -32,7 +34,9 @@
       <? $day2 = yaml($data->day2()) ?>
       <? if(!empty($day2)): ?>
       <table class="t schedule">
-        <caption class="schedule__caption"><?= $data->day2_title() ?></caption>
+        <caption class="schedule__caption"><?= $data->day2_title() ?>
+          <div class="schedule__desc"><?= $data->day2_desc() ?></div>
+        </caption>
         <tbody class="t-body"><? foreach($day2 as $line): ?>
           <tr class="t-body__tr">
             <td class="t-body__td--time"><?= $line["time"] ?></td>

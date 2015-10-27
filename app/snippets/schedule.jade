@@ -6,7 +6,9 @@ section#schedule.section--lightgray.js-section
 			<? $day1 = yaml($data->day1()) ?>
 			<? if(!empty($day1)): ?>
 			table.t.schedule
-				caption.schedule__caption <?= $data->day1_title() ?>
+				caption.schedule__caption
+					<?= $data->day1_title() ?>
+					.schedule__desc <?= $data->day1_desc() ?>
 				tbody.t-body
 					<? foreach($day1 as $line): ?>
 					tr.t-body__tr
@@ -46,7 +48,9 @@ section#schedule.section--lightgray.js-section
 			<? $day2 = yaml($data->day2()) ?>
 			<? if(!empty($day2)): ?>
 			table.t.schedule
-				caption.schedule__caption <?= $data->day2_title() ?>
+				caption.schedule__caption
+					<?= $data->day2_title() ?>
+					.schedule__desc <?= $data->day2_desc() ?>
 				tbody.t-body
 					<? foreach($day2 as $line): ?>
 					tr.t-body__tr
