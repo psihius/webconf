@@ -11,3 +11,11 @@
 		text-align left
 		vertical-align top
 		border-top: 1px dashed darken($color.white, 20%)
+	&__td--time
+		@extend .t-body__td
+		text-align right
+		width 50px
+		@media(min-width: $screens.ph.bp)
+			min-width 160px
+		@media(min-width: $screens.tv.bp)
+			width 30%
