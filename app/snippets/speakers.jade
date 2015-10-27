@@ -5,7 +5,7 @@ section#speakers.section--dark.js-section
 		<? if($data->hasChildren()): ?>
 		.speakers
 			<? foreach($data->children()->visible() as $speaker): ?>
-			.speakers__item.speaker
+			.speakers__item.speaker.js-speaker(id!="<?= $speaker->slug() ?>")
 				<? if ($photo = $speaker->image("photo.jpg")): ?>
 				.speaker__photo
 					<?= thumb($photo, array('width' => 128, 'height' => 128, 'crop' => true, 'title' => $speaker->title(), 'quality' => 80)) ?>
@@ -25,6 +25,3 @@ section#speakers.section--dark.js-section
 				<? endif ?>
 			<? endforeach ?>
 		<? endif ?>
-	//- .section--dark__foot
-	//- 	h3.section--dark__foottitle <?= $data->foottitle() ?>
-	//- 	a(href="#contact").button--ghost_accent.button--lg.js-scrollTo <?= l::get("contact us") ?>
