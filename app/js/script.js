@@ -48,9 +48,13 @@
 				speed: 1000,
 			});
 			$(".js-mainnavCloser").trigger(touchOrClick());
+			$(to).trigger("highlight");
 			return false;
 		});
-
+		$('.js-speaker').on("highlight", function(){
+			$('.js-speaker').removeClass("active");
+			$(this).addClass("active");
+		});
 		$("#contactForm")
 			.submit(function (e) {
 				e.preventDefault();
