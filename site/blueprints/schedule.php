@@ -10,6 +10,9 @@ fields:
 	day1_title:
 		label: Day 1 Title
 		type: text
+	day1_desc:
+		label: Day 1 Desc
+		type: text
 	day1:
 		label: Day 1
 		type: textarea
@@ -24,6 +27,9 @@ fields:
 		type: textarea
 	day2_title:
 		label: Day 2 Title
+		type: text
+	day2_desc:
+		label: Day 2 Desc
 		type: text
 	day2:
 		label: Day 2
