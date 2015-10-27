@@ -3,20 +3,44 @@
 		font-size 32px
 		line-height 48px
 		font($font.body.light)
-		margin-bottom 10px
+		padding-bottom 20px
 	&__desc
 		font-size 14px
 		line-height 18px
 		color: lighten($color.black, 50%)
+	&__desc--accented
+		font-size 16px
+		line-height 20px
+		color: lighten($color.black, 30%)
+		p
+			margin 0
+			& + p
+				margin 1em 0 0
+	&__time
+		text-align right
+		letter-spacing 1px
+		font($font.body.light)
+		color: lighten($color.black, 30%)
+		font-size 18px
+		width 50px
+		@media(min-width: $screens.ph.bp)
+			min-width 160px
+			font-size 24px
+		@media(min-width: $screens.tv.bp)
+			width 30%
 	&__link
 		display block
 	&__action
-		line-height 28px
+		line-height 18px
+		@media(min-width: $screens.ph.bp)
+			line-height 28px
 	&__speaker
 		display block
 		margin 6px 0
 		color: lighten($color.black, 50%)
 	&__speach
 		display block
-		font-size 24px
 		font($font.body.semibold)
+		font-size 18px
+		@media(min-width: $screens.ph.bp)
+			font-size 24px
