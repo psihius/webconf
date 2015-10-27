@@ -13,7 +13,9 @@
         </caption>
         <tbody class="t-body"><? foreach($day1 as $line): ?>
           <tr class="t-body__tr">
-            <td class="t-body__td schedule__time"><?= $line["time"] ?></td>
+            <td class="t-body__td--time">
+              <div class="schedule__time"><?= $line["time"] ?></div>
+            </td>
             <td class="t-body__td"><? if($line["type"] == "speach"): ?><a href="#<?= $line['link'] ?>" class="js-scrollTo schedule__link"><span class="schedule__speach"><?= $line["title"] ?></span><span class="schedule__speaker"><?= $line["speaker"] ?></span></a><? else: ?><span class="schedule__action"><?= $line["title"] ?></span><? endif ?></td>
           </tr><? endforeach ?>
         </tbody>
@@ -26,7 +28,9 @@
         </caption>
         <tbody class="t-body"><? foreach($afterparty as $line): ?>
           <tr class="t-body__tr">
-            <td class="t-body__td schedule__time"><?= $line["time"] ?></td>
+            <td class="t-body__td--time">
+              <div class="schedule__time"><?= $line["time"] ?></div>
+            </td>
             <td class="t-body__td"><? if($line["type"] == "speach"): ?><a href="#<?= $line['link'] ?>" class="js-scrollTo schedule__link"><span class="schedule__speach"><?= $line["title"] ?></span><span class="schedule__speaker"><?= $line["speaker"] ?></span></a><? else: ?><span class="schedule__action"><?= $line["title"] ?></span><? endif ?></td>
           </tr><? endforeach ?>
         </tbody>
@@ -39,7 +43,9 @@
         </caption>
         <tbody class="t-body"><? foreach($day2 as $line): ?>
           <tr class="t-body__tr">
-            <td class="t-body__td schedule__time"><?= $line["time"] ?></td>
+            <td class="t-body__td--time">
+              <div class="schedule__time"><?= $line["time"] ?></div>
+            </td>
             <td class="t-body__td"><? if($line["type"] == "speach"): ?><a href="#<?= $line['link'] ?>" class="js-scrollTo schedule__link"><span class="schedule__speach"><?= $line["title"] ?></span><span class="schedule__speaker"><?= $line["speaker"] ?></span></a><? else: ?><span class="schedule__action"><?= $line["title"] ?></span><? endif ?></td>
           </tr><? endforeach ?>
         </tbody>
