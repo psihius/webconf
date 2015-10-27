@@ -3,6 +3,7 @@
 
 l::set('participate', 'Participate');
 l::set('sponsor', 'Sponsor us');
+l::set('schedule', 'Schedule');
 
 l::set('past-events-title', 'Past events');
 l::set('speeches', 'Speeches');

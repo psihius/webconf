@@ -3,6 +3,7 @@
 
 l::set('participate', 'Piedālīties');
 l::set('sponsor', 'Sponsoriem');
+l::set('schedule', 'Saraksts');
 
 l::set('past-events-title', 'Pagājušie pasākumi');
 l::set('speeches', 'Zīņojumi');
