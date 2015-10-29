@@ -12,8 +12,8 @@
         <div class="location__info">
           <div class="location__head">
             <div class="location__name"><?= $data->name() ?></div>
+            <div class="location__addess"><?= $data->address() ?></div>
           </div>
-          <div class="location__addess"><?= $data->address() ?></div>
           <div class="location__parking"><?= kirbytext($data->parking()) ?></div>
           <div class="location__maplink"><a href="<?= $data->map() ?>" target="_blank" class="button--ghost_white"><?= l::get("open map") ?></a></div>
         </div>
