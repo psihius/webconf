@@ -12,7 +12,7 @@ section#location.section--gray.js-section
 				.location__info
 					.location__head
 						.location__name <?= $data->name() ?>
-					.location__addess <?= $data->address() ?>
+						.location__addess <?= $data->address() ?>
 					.location__parking <?= kirbytext($data->parking()) ?>
 					.location__maplink
 						a(href!="<?= $data->map() ?>" target="_blank").button--ghost_white <?= l::get("open map") ?>

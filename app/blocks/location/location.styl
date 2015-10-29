@@ -35,10 +35,11 @@
 		flex-direction column
 		z-index 1
 	&__head
-		flex 1 1 0%
+		flex 2 1 0%
 		display flex
-		justify-content center
-		align-items flex-end
+		flex-direction column
+		justify-content flex-end
+		align-items center
 	&__name
 		color: $color.white
 		font($font.body.light)
@@ -46,8 +47,12 @@
 		font-size 28px
 		line-height 28px
 		@media(min-width: $screens.th.bp)
+			font-size 42px
+			line-height 42px
+		@media(min-width: $screens.ds.bp)
 			font-size 48px
 			line-height 48px
+
 	&__addess
 		font-size 18px
 		line-height 24px
@@ -56,12 +61,12 @@
 			font-size 20px
 			line-height 30px
 	&__parking
-		text-align left
 		line-height 24px
-		flex 1 1 0%
-		background-color: darken($color.white, 15%)
-		padding 20px
-		color: lighten($color.black, 15%)
+		flex 1 1 60px
+		background-color: alpha($color.black, 65%)
+		padding 10px 20px
+		color: darken($color.white, 15%)
 		margin 20px 20px 20px
 		@media(min-width: $screens.th.bp)
 			margin 20px 40px 40px
+			padding 15px 40px
