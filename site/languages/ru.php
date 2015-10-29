@@ -4,6 +4,7 @@
 l::set('participate', 'Участвовать');
 l::set('sponsor', 'Спонсорство');
 l::set('schedule', 'Расписание');
+l::set('open map', 'Открыть карту');
 
 l::set('past-events-title', 'Прошедшие мероприятия');
 l::set('speeches', 'Докладов');
