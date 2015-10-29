@@ -73,5 +73,16 @@
 		background-color: lighten($color.black, 50%)
 		border-color: @background-color
 
+.button--ghost_white
+	@extend .button, .button--ghost
+	&, &:link, &:visited
+		color: $color.white
+		border-color: darken(@color, 25%)
+		fill: @color
+	&:hover, &:active
+		background-color: $color.white
+		color: $color.black
+		border-color: @background-color
+
 .button--lg
 	font-size 24px

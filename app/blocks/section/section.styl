@@ -66,6 +66,15 @@
 			background: darken($color.white, 25%)
 	&__body
 		color: lighten($color.black, 15%)
+.section--gray
+	@extend .section
+	background-color: darken($color.white, 15%)
+	&__title
+		color: darken($color.white, 65%)
+		&::before, &::after
+			background: darken($color.white, 40%)
+	&__body
+		color: lighten($color.black, 5%)
 .section--dark
 	@extend .section
 	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAABBJREFUCB1jYMAD6pHlcHMAJvYBfjsxS60AAAAASUVORK5CYII=') lighten($color.black, 15%)

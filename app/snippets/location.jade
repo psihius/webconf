@@ -1,0 +1,20 @@
+section#location.section--gray.js-section
+	.section--gray__head
+		h3.section--gray__title <?= $data->title() ?>
+	.section--gray__body
+		.location
+			.location__container
+				<? if($data->images()): ?>
+				<? foreach($data->images() as $image): ?>
+				img(src!="<?= thumb($image, array('width'=> 1280,'height' => 640, 'crop' => true, 'blur' => true))->url() ?>").location__image
+				<? endforeach ?>
+				<? endif ?>
+				.location__info
+					.location__head
+						.location__name <?= $data->name() ?>
+					.location__addess <?= $data->address() ?>
+					.location__parking <?= kirbytext($data->parking()) ?>
+					.location__maplink
+						a(href!="<?= $data->map() ?>" target="_blank").button--ghost_white <?= l::get("open map") ?>
+			.location__map
+				iframe(src!="<?= $data->iframe() ?>" frameborder="0" allowfullscreen).location__googlemap

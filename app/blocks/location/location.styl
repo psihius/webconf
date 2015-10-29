@@ -1,0 +1,67 @@
+.location
+	height 500px
+	&__map
+		@media(min-width: $screens.th.bp)
+			position absolute 130px 50% 0 0
+	&__googlemap
+		display none
+		@media(min-width: $screens.th.bp)
+			display block
+			width 100%
+			height 100%
+	&__maplink
+		padding 0 20px 30px
+		@media(min-width: $screens.th.bp)
+			display none
+	&__container
+		padding 0 20px
+		position absolute 130px 0 0 0
+		overflow hidden
+		padding 0 40px
+		@media(min-width: $screens.th.bp)
+			left 50%
+		&::after
+			content ""
+			position absolute 0 0 0 0
+			background: alpha($color.black, 50%)
+	&__image
+		position absolute 50% auto auto 50%
+		transform translate(-50%, -50%)
+		min-width 100%
+		min-height 100%
+	&__info
+		position absolute 0 0 0 0
+		display flex
+		flex-direction column
+		z-index 1
+	&__head
+		flex 1 1 0%
+		display flex
+		justify-content center
+		align-items flex-end
+	&__name
+		color: $color.white
+		font($font.body.light)
+		margin-bottom 10px
+		font-size 28px
+		line-height 28px
+		@media(min-width: $screens.th.bp)
+			font-size 48px
+			line-height 48px
+	&__addess
+		font-size 18px
+		line-height 24px
+		color: darken($color.white, 15%)
+		@media(min-width: $screens.th.bp)
+			font-size 20px
+			line-height 30px
+	&__parking
+		text-align left
+		line-height 24px
+		flex 1 1 0%
+		background-color: darken($color.white, 15%)
+		padding 20px
+		color: lighten($color.black, 15%)
+		margin 20px 20px 20px
+		@media(min-width: $screens.th.bp)
+			margin 20px 40px 40px
