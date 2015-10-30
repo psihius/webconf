@@ -20,4 +20,4 @@ fields:
 		type: textarea
 	url:
 		label: Website
-		type: url
+		type: website

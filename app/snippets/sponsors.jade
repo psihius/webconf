@@ -10,7 +10,7 @@ section#sponsors.section--light.js-section
 				div(class!="sponsor<?= $mod ?>")
 					<? if($sponsor->image('logo.png')): ?>
 					div(class!="sponsor<?= $mod ?>__logo")
-						a(href!="<?= $sponsor->url() ?>" )
+						a(href!="<?= $sponsor->website() ?>" )
 							img(src!="<?= $sponsor->image('logo.png')->url() ?>")
 					<? endif ?>
 					h2(class!="sponsor<?= $mod ?>__name")
