@@ -1,0 +1,19 @@
+section#sponsorship.section--dark.js-section
+	.section--dark__head
+		h1.section--dark__title <?= $data->title() ?>
+	.section--dark__body.sponsorspacks
+		<? if($data->hasChildren()): ?>
+		<? foreach($data->children() as $pack): ?>
+		<? if ($pack->type()->isNotEmpty()) { $mod = "--".$pack->type(); } ?>
+		.sponsorspacks__item(class!="sponsorspack<?= $mod ?>")
+			div(class!="sponsorspack<?= $mod ?>__head") <?= $pack->title() ?>
+			div(class!="sponsorspack<?= $mod ?>__body") <?= kirbytext($pack->benefits()) ?>
+			div(class!="sponsorspack<?= $mod ?>__foot")
+				span.price
+					span.price__value <?= $pack->price() ?>
+					span.price__label <?= l::get("vat") ?>
+		<? endforeach ?>
+		<? endif ?>
+	.section--dark__foot
+		h3.section--dark__foottitle <?= $data->foottitle() ?>
+		a(href="#contact").button--ghost_accent.button--lg.js-scrollTo <?= l::get("contact us") ?>
