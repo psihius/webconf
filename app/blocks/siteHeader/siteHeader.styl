@@ -7,8 +7,11 @@
 	height 60px
 	line-height: (@height * 0.9)
 	&__lang
-		flex 1 0 125px
+		flex 1 0 120px
 		padding 0 12px
+		@media(min-width: $screens.th.bp)
+			flex 1 0 115px
+			padding-right 6px
 		.sticky &
 			display none
 			@media(min-width: $screens.pv.bp)
@@ -41,8 +44,9 @@
 			padding 0 6px
 	&__socials
 		padding 0 12px
-		flex 1 0 125px
+		flex 1 0 115px
 		text-align right
 		display none
 		@media(min-width: $screens.th.bp)
 			display block
+			padding-left 6px
