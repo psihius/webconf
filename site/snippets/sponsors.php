@@ -10,7 +10,7 @@
       <? if ($sponsor->type()->isNotEmpty()) { $mod = "--".$sponsor->type(); } ?>
       <div class="sponsors__item">
         <div class="sponsor<?= $mod ?>"><? if($sponsor->image('logo.png')): ?>
-          <div class="sponsor<?= $mod ?>__logo"><a href="<?= $sponsor->url() ?>"><img src="<?= $sponsor->image('logo.png')->url() ?>"/></a></div><? endif ?>
+          <div class="sponsor<?= $mod ?>__logo"><a href="<?= $sponsor->website() ?>"><img src="<?= $sponsor->image('logo.png')->url() ?>"/></a></div><? endif ?>
           <h2 class="sponsor<?= $mod ?>__name"><a href="<?= $sponsor->url() ?>"><?= $sponsor->title() ?></a></h2>
           <div class="sponsor<?= $mod ?>__body">
             <div class="bodytext"><?= kirbytext($sponsor->text()) ?></div>
