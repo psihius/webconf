@@ -18,6 +18,6 @@ fields:
 	text:
 		label: Text
 		type: textarea
-	url:
+	website:
 		label: Website
-		type: website
+		type: url
