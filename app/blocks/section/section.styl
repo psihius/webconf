@@ -47,6 +47,12 @@
 		font-size 14px
 		@media(min-width: $screens.pv.bp)
 			font-size 16px
+	&__foottitle
+		font($font.body.regular)
+		margin 48px 0 32px
+		font-size 22px
+		@media(min-width: $screens.pv.bp)
+			font-size 32px
 .section--light
 	@extend .section
 	background-color: $color.white
@@ -84,8 +90,3 @@
 			background: darken($color.white, 75%)
 	&__foottitle
 		color: $color.white
-		font($font.body.regular)
-		margin 48px 0 32px
-		font-size 22px
-		@media(min-width: $screens.pv.bp)
-			font-size 32px
