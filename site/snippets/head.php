@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="description" content="<?= ($page->isHomepage()) ? $site->description() : $page->meta_description() ?>"/>
   <meta name="author" content="<?= $site->author() ?>"/>
-  <meta name="keywords" content="<?= $page->keywords() ?>"/><? snippet('favicons') ?>
+  <meta name="keywords" content="<?= $page->keywords() ?>"/>
+  <meta http-equiv="x-ua-compatible" content="ie=edge"/><? snippet('favicons') ?>
   <?= css('assets/css/599d168d.main.cache.css') ?>
   <? snippet('facebook_aud') ?><!--[if (!IE)|(gt IE 8)]><!-->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!--<![endif]-->

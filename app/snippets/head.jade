@@ -9,6 +9,7 @@ head
 	meta(name="description", content!="<?= ($page->isHomepage()) ? $site->description() : $page->meta_description() ?>")
 	meta(name="author", content!="<?= $site->author() ?>")
 	meta(name="keywords", content!="<?= $page->keywords() ?>")
+	meta(http-equiv="x-ua-compatible" content="ie=edge")
 	
 	<? snippet('favicons') ?>
 	<?= css('assets/css/main.css') ?>
