@@ -4,4 +4,5 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><![endif]-->
 <script src="<?= url('assets/js_libs/jquery.smooth-scroll.min.js') ?>"></script>
 <script src="<?= url('assets/js_libs/hammer.min.js') ?>"></script>
+<script src="<?= url('assets/js_libs/jquery.hammer.js') ?>"></script>
 <script src="<?= url('assets/js/script.js') ?>"></script>
