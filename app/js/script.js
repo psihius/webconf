@@ -3,13 +3,13 @@
 
 (function ($) {
 	'use strict';
-	var touchOrClick = function (e) {
-		if ('ontouchstart' in document.documentElement) {
-			return 'touchstart';
-		} else {
-			return 'click';
-		}
-	};
+	// var touchOrClick = function (e) {
+	// 	if ('ontouchstart' in document.documentElement) {
+	// 		return 'touchstart';
+	// 	} else {
+	// 		return 'click';
+	// 	}
+	// };
 
 	function changeNavItemOnScroll(event){
 		var curWindowTop = $(window).scrollTop(),
@@ -34,20 +34,20 @@
 
 		var $mainnavItems = $(".js-mainnavItem");
 
-		$mainnavItems
-			.on(touchOrClick(), function(){
+		$mainnavItems.hammer()
+			.on("tap", function(){
 				$mainnavItems.filter(".active").removeClass("active");
 				$(this).addClass("active");
 			});
 
-		$('.js-scrollTo, .js-mainnavItem').on(touchOrClick(), function () {
+		$('.js-scrollTo, .js-mainnavItem').hammer().on("tap", function () {
 			var to = $(this).attr("href");
 			$.smoothScroll({
 				scrollTarget: to,
 				offset: -60,
 				speed: 1000,
 			});
-			$(".js-mainnavCloser").trigger(touchOrClick());
+			$(".js-mainnavCloser").hammer().trigger("tap");
 			$(to).trigger("highlight");
 			return false;
 		});
@@ -146,7 +146,7 @@
 		});
 		$(window).trigger("scroll");
 
-		$(".js-mainnavOpener").on(touchOrClick(), function(){
+		$(".js-mainnavOpener").hammer().on("tap", function(){
 			$(".js-mainnavList").addClass("active");
 			$(".js-mainnavCloser").addClass("active");
 			$(this).removeClass("active");
@@ -154,7 +154,7 @@
 			$(".js-siteHeaderLogo").removeClass("active");
 			$(".js-siteHeaderLang").addClass("active");
 		});
-		$(".js-mainnavCloser").on(touchOrClick(), function(){
+		$(".js-mainnavCloser").hammer().on("tap", function(){
 			$(".js-mainnavList").removeClass("active");
 			$(".js-mainnavOpener").addClass("active");
 			$(this).removeClass("active");
