@@ -16,8 +16,10 @@
 			$mainnavItems = $('.js-mainnavItem'),
 			siteHeaderHeight = $('.js-siteHeader').outerHeight();
 		$mainnavItems.each(function () {
-			var $item = $(this);
-			var $section = $($item.attr("href"));
+			var $item = $(this),
+				href = $item.attr("href"),
+				sectionId = href.substring(href.indexOf("#")),
+				$section = $(sectionId);
 			if($section.length){
 				if ($section.position().top - siteHeaderHeight <= curWindowTop && $section.position().top + $section.outerHeight() - siteHeaderHeight > curWindowTop) {
 					$mainnavItems.removeClass("active");
@@ -42,6 +44,7 @@
 
 		$('.js-scrollTo, .js-mainnavItem').hammer().on("tap", function () {
 			var to = $(this).attr("href");
+			to = to.substring(to.indexOf("#"));
 			$.smoothScroll({
 				scrollTarget: to,
 				offset: -60,

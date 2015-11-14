@@ -1,0 +1,74 @@
+section#schedule.section--lightgray.js-section
+	.section--lightgray__head
+		h1.section--lightgray__title <?= $data->title() ?>
+	.section--lightgray__body
+		.wrapper
+			<? $day1 = yaml($data->day1()) ?>
+			<? if(!empty($day1)): ?>
+			table.t.schedule
+				caption.schedule__caption
+					<?= $data->day1_title() ?>
+					.schedule__desc <?= $data->day1_desc() ?>
+				tbody.t-body
+					<? foreach($day1 as $line): ?>
+					tr.t-body__tr
+						td.t-body__td--time
+							.schedule__time <?= $line["time"] ?>
+						td.t-body__td
+							<? if($line["type"] == "speach"): ?>
+							//- a(href!="#<?= $line['link'] ?>").js-scrollTo.schedule__link
+							span.schedule__speaker <?= $line["speaker"] ?>
+							span.schedule__speach <?= $line["title"] ?>
+							span.schedule__desc <?= $line["desc"] ?>
+							<? else: ?>
+							span.schedule__action <?= $line["title"] ?>
+							<? endif ?>
+							
+					<? endforeach ?>
+			<? endif ?>
+			<? $afterparty = yaml($data->afterparty()) ?>
+			<? if(!empty($afterparty)): ?>
+			table.t.schedule
+				caption.schedule__caption
+					<?= $data->afterparty_title() ?>
+					.schedule__desc--accented <?= kirbytext($data->afterparty_desc()) ?>
+				tbody.t-body
+					<? foreach($afterparty as $line): ?>
+					tr.t-body__tr
+						td.t-body__td--time
+							.schedule__time <?= $line["time"] ?>
+						td.t-body__td
+							<? if($line["type"] == "speach"): ?>
+							<?= print_r($line) ?>
+							//- a(href!="#<?= $line['link'] ?>").js-scrollTo.schedule__link
+							span.schedule__speach <?= $line["title"] ?>
+							span.schedule__desc <?= $line["desc"] ?>
+							span.schedule__speaker <?= $line["speaker"] ?>
+							<? else: ?>
+							span.schedule__action <?= $line["title"] ?>
+							<? endif ?>
+							
+					<? endforeach ?>
+			<? endif ?>
+			<? $day2 = yaml($data->day2()) ?>
+			<? if(!empty($day2)): ?>
+			table.t.schedule
+				caption.schedule__caption
+					<?= $data->day2_title() ?>
+					.schedule__desc <?= $data->day2_desc() ?>
+				tbody.t-body
+					<? foreach($day2 as $line): ?>
+					tr.t-body__tr
+						td.t-body__td--time
+							.schedule__time <?= $line["time"] ?>
+						td.t-body__td
+							<? if($line["type"] == "speach"): ?>
+							a(href!="#<?= $line['link'] ?>").js-scrollTo.schedule__link
+								span.schedule__speach <?= $line["title"] ?>
+								span.schedule__speaker <?= $line["speaker"] ?>
+							<? else: ?>
+							span.schedule__action <?= $line["title"] ?>
+							<? endif ?>
+							
+					<? endforeach ?>
+			<? endif ?>

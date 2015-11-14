@@ -1,3 +1,4 @@
+<? $navurl = ($site->url() !== $page->url()) ? $site->url() : "" ?>
 header.siteHeader.js-siteHeader
 	nav.siteHeader__lang.nav(role="navigation").js-siteHeaderLang
 		<? foreach($site->languages() as $language): ?>
@@ -5,20 +6,20 @@ header.siteHeader.js-siteHeader
 		a(href!="<?= $page->url($language->code()) ?>").nav__item--lang <?= $language->code() ?>
 		<? 	endif ?>
 		<? endforeach ?>
-	a(href="#hero").siteHeader__logo.js-siteHeaderLogo.active: img(src="assets/images/logo.svg")
+	a(href!="<?= $navurl ?>#hero").siteHeader__logo.js-siteHeaderLogo.active: img(src="assets/images/logo.svg")
 	nav.siteHeader__mainnav.nav--mainnav
 		button.nav__item--hiddenicon.js-mainnavOpener.active
 			svg: use(xlink:href="#icon-hamburger")
 		button.nav__item--hiddenicon.js-mainnavCloser
 			svg: use(xlink:href="#icon-close")
 		.nav--mainnav__list(role="navigation").js-mainnavList
-			a(href!="#hero").nav--mainnav__item--logo.js-mainnavItem: img(src="assets/images/logo.svg")
+			a(href!="<?= $navurl ?>#hero").nav--mainnav__item--logo.js-mainnavItem: img(src="assets/images/logo.svg")
 			<? foreach($pages->visible()->not(array('hero','tickets','past')) as $section): ?>
-			a(href!="#<?= $section->uid() ?>").nav--mainnav__item.js-mainnavItem <?= $section->title() ?>
+			a(href!="<?= $navurl ?>#<?= $section->uid() ?>").nav--mainnav__item.js-mainnavItem <?= $section->title() ?>
 			<? endforeach ?>
 			<? $tickets = $pages->find('tickets') ?>
-			a(href!="#<?= $tickets->uid() ?>").nav--mainnav__item--button.js-mainnavItem
-				span.button--ghost_accent_tiny <?= $tickets->title() ?>
+			//- a(href!="<?= $navurl ?>#<?= $tickets->uid() ?>").nav--mainnav__item--button.js-mainnavItem
+			//- 	span.button--ghost_accent_tiny <?= $tickets->title() ?>
 	nav.siteHeader__socials.nav
 		a(href="https://www.facebook.com/webconfriga").nav__item--icon.icon--fb
 			svg: use(xlink:href="#icon-facebook")
