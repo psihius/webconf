@@ -50,7 +50,8 @@
             <td class="t-body__td--time">
               <div class="schedule__time"><?= $line["time"] ?></div>
             </td>
-            <td class="t-body__td"><? if($line["type"] == "speach"): ?><a href="#<?= $line['link'] ?>" class="js-scrollTo schedule__link"><span class="schedule__speach"><?= $line["title"] ?></span><span class="schedule__speaker"><?= $line["speaker"] ?></span></a><? else: ?><span class="schedule__action"><?= $line["title"] ?></span><? endif ?></td>
+            <td class="t-body__td"><? if($line["type"] == "speach"): ?><span class="schedule__speach"><?= $line["title"] ?></span><span class="schedule__desc"><?= $line["desc"] ?></span><span class="schedule__speaker"><?= $line["speaker"] ?></span><? else: ?><span class="schedule__action"><?= $line["title"] ?></span><? endif ?>
+            </td>
           </tr><? endforeach ?>
         </tbody>
       </table><? endif ?>
