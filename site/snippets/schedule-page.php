@@ -1,4 +1,4 @@
-
+<? date_default_timezone_set('Europe/Riga'); ?>
 <section id="schedule" class="section--lightgray js-section">
   <div class="section--lightgray__head">
     <h1 class="section--lightgray__title"><?= $data->title() ?></h1>
@@ -11,8 +11,26 @@
         <caption class="schedule__caption"><?= $data->day1_title() ?>
           <div class="schedule__desc"><?= $data->day1_desc() ?></div>
         </caption>
-        <tbody class="t-body"><? foreach($day1 as $line): ?>
-          <tr class="t-body__tr">
+        <tbody class="t-body">
+          <? foreach($day1 as $key => $line): ?>
+          <?
+          $nextLine = null;
+          $nextKey = $key + 1;
+          if (isset($day1[$nextKey])) {
+          	$nextLine = $day1[$nextKey];
+          }
+          $nextTime = $line["time"] + 60 * 60;
+          if ($nextLine !== null) {
+          	$nextTime = strtotime($nextLine["time"]);
+          }
+          $currentTime = strtotime($line["time"]);
+          $class = null;if (time() > $currentTime && time() < $nextTime) {
+          	$class = 'schedule__status--present';
+          } elseif (time() > $currentTime) {
+          	$class = 'schedule__status--past';
+          }	
+          ?>
+          <tr class="t-body__tr <?= $class ?>">
             <td class="t-body__td--time">
               <div class="schedule__time"><?= $line["time"] ?></div>
             </td>
