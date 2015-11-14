@@ -41,19 +41,23 @@
 				$mainnavItems.filter(".active").removeClass("active");
 				$(this).addClass("active");
 			});
-
-		$('.js-scrollTo, .js-mainnavItem').hammer().on("tap", function () {
-			var to = $(this).attr("href");
-			to = to.substring(to.indexOf("#"));
-			$.smoothScroll({
-				scrollTarget: to,
-				offset: -60,
-				speed: 1000,
+		$('.js-scrollTo, .js-mainnavItem')
+			.on("click", function (e) {
+				e.preventDefault();
+			})
+			.hammer().on("tap", function () {
+				var to = $(this).attr("href");
+				to = to.substring(to.indexOf("#"));
+				$.smoothScroll({
+					scrollTarget: to,
+					offset: -60,
+					speed: 1000,
+				});
+				$(".js-mainnavCloser").hammer().trigger("tap");
+				$(to).trigger("highlight");
+				return false;
 			});
-			$(".js-mainnavCloser").hammer().trigger("tap");
-			$(to).trigger("highlight");
-			return false;
-		});
+		
 		$('.js-speaker').on("highlight", function(){
 			$('.js-speaker').removeClass("active");
 			$(this).addClass("active");
