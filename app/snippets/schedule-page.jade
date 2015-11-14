@@ -1,3 +1,4 @@
+<? date_default_timezone_set('Europe/Riga'); ?>
 section#schedule.section--lightgray.js-section
 	.section--lightgray__head
 		h1.section--lightgray__title <?= $data->title() ?>
@@ -10,8 +11,27 @@ section#schedule.section--lightgray.js-section
 					<?= $data->day1_title() ?>
 					.schedule__desc <?= $data->day1_desc() ?>
 				tbody.t-body
-					<? foreach($day1 as $line): ?>
-					tr.t-body__tr
+					<? foreach($day1 as $key => $line): ?>
+					<?
+					|$nextLine = null;
+					|$nextKey = $key + 1;
+					|if (isset($day1[$nextKey])) {
+					|	$nextLine = $day1[$nextKey];
+					|}
+					|$nextTime = $line["time"] + 60 * 60;
+					|if ($nextLine !== null) {
+					|	$nextTime = strtotime($nextLine["time"]);
+					|}
+					|$currentTime = strtotime($line["time"]);
+					|$class = null;
+					//- | echo "<br><br>".$key."<br>lineTime: ".$nextLine["time"] ."<br>NextTime: ".$nextTime;
+					|if (time() > $currentTime && time() < $nextTime) {
+					|	$class = 'schedule__status--present';
+					|} elseif (time() > $currentTime) {
+					|	$class = 'schedule__status--past';
+					|}	
+					|?>
+					tr(class!="t-body__tr <?= $class ?>")
 						td.t-body__td--time
 							.schedule__time <?= $line["time"] ?>
 						td.t-body__td

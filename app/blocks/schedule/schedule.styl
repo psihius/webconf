@@ -42,3 +42,20 @@
 		font-size 18px
 		@media(min-width: $screens.ph.bp)
 			font-size 24px
+	&__status--past
+		opacity .8
+		.schedule__desc
+			display none
+		color: lighten($color.black, 40%)
+	&__status--present
+		background-color: lighten($color.gold, 90%)
+		.t-body__td--time
+			position relative
+			border-left: 3px solid $color.gold
+			&::after
+				position absolute 50% auto auto 0
+				content ""
+				transform translateY(-50%)
+				border 8px solid transparent
+				border-width 8px 0 8px 8px
+				border-left-color: $color.gold
