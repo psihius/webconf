@@ -16,9 +16,16 @@ section#schedule.section--lightgray.js-section
 							.schedule__time <?= $line["time"] ?>
 						td.t-body__td
 							<? if($line["type"] == "speach"): ?>
-							a(href!="#<?= $line['link'] ?>").js-scrollTo.schedule__link
+							<? 		if(isset($line["slides"])): ?>
+							a(href!="<?= $line['slides'] ?>" target="_blank").schedule__link
 								span.schedule__speach <?= $line["title"] ?>
-								span.schedule__speaker <?= $line["speaker"] ?>
+							<? 		else: ?>
+							span.schedule__speach <?= $line["title"] ?>
+							<? 		endif ?>
+							<? 		if(isset($line["link"])): ?>
+							a(href!="#<?= $line['link'] ?>").js-scrollTo.schedule__speaker
+								<?= $line["speaker"] ?>
+							<? 		endif ?>
 							<? else: ?>
 							span.schedule__action <?= $line["title"] ?>
 							<? endif ?>
@@ -60,9 +67,16 @@ section#schedule.section--lightgray.js-section
 							.schedule__time <?= $line["time"] ?>
 						td.t-body__td
 							<? if($line["type"] == "speach"): ?>
-							a(href!="#<?= $line['link'] ?>").js-scrollTo.schedule__link
+							<? 		if(isset($line["slides"])): ?>
+							a(href!="<?= $line['slides'] ?>" target="_blank").schedule__link
 								span.schedule__speach <?= $line["title"] ?>
-								span.schedule__speaker <?= $line["speaker"] ?>
+							<? 		else: ?>
+							span.schedule__speach <?= $line["title"] ?>
+							<? 		endif ?>
+							<? 		if(isset($line["link"])): ?>
+							a(href!="#<?= $line['link'] ?>").js-scrollTo.schedule__speaker
+								<?= $line["speaker"] ?>
+							<? 		endif ?>
 							<? else: ?>
 							span.schedule__action <?= $line["title"] ?>
 							<? endif ?>
