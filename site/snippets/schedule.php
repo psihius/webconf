@@ -16,7 +16,12 @@
             <td class="t-body__td--time">
               <div class="schedule__time"><?= $line["time"] ?></div>
             </td>
-            <td class="t-body__td"><? if($line["type"] == "speach"): ?><a href="#<?= $line['link'] ?>" class="js-scrollTo schedule__link"><span class="schedule__speach"><?= $line["title"] ?></span><span class="schedule__speaker"><?= $line["speaker"] ?></span></a><? else: ?><span class="schedule__action"><?= $line["title"] ?></span><? endif ?></td>
+            <td class="t-body__td">
+              <? if($line["type"] == "speach"): ?>
+              <? 		if(isset($line["slides"])): ?><a href="<?= $line['slides'] ?>" target="_blank" class="schedule__link"><span class="schedule__speach"><?= $line["title"] ?></span></a><? 		else: ?><span class="schedule__speach"><?= $line["title"] ?></span><? 		endif ?>
+              <? 		if(isset($line["link"])): ?><a href="#<?= $line['link'] ?>" class="js-scrollTo schedule__speaker"><?= $line["speaker"] ?></a><? 		endif ?>
+              <? else: ?><span class="schedule__action"><?= $line["title"] ?></span><? endif ?>
+            </td>
           </tr><? endforeach ?>
         </tbody>
       </table><? endif ?>
@@ -46,7 +51,12 @@
             <td class="t-body__td--time">
               <div class="schedule__time"><?= $line["time"] ?></div>
             </td>
-            <td class="t-body__td"><? if($line["type"] == "speach"): ?><a href="#<?= $line['link'] ?>" class="js-scrollTo schedule__link"><span class="schedule__speach"><?= $line["title"] ?></span><span class="schedule__speaker"><?= $line["speaker"] ?></span></a><? else: ?><span class="schedule__action"><?= $line["title"] ?></span><? endif ?></td>
+            <td class="t-body__td">
+              <? if($line["type"] == "speach"): ?>
+              <? 		if(isset($line["slides"])): ?><a href="<?= $line['slides'] ?>" target="_blank" class="schedule__link"><span class="schedule__speach"><?= $line["title"] ?></span></a><? 		else: ?><span class="schedule__speach"><?= $line["title"] ?></span><? 		endif ?>
+              <? 		if(isset($line["link"])): ?><a href="#<?= $line['link'] ?>" class="js-scrollTo schedule__speaker"><?= $line["speaker"] ?></a><? 		endif ?>
+              <? else: ?><span class="schedule__action"><?= $line["title"] ?></span><? endif ?>
+            </td>
           </tr><? endforeach ?>
         </tbody>
       </table><? endif ?>
